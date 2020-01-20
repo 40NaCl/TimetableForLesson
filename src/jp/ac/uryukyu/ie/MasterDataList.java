@@ -1,17 +1,14 @@
 package jp.ac.uryukyu.ie;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class MasterDataList {
-    public List<LessonData> Lessoninfo;
+    public List<LessonData> LessonDetails;
 
-    public List<LessonData>getLessoninfo(){
-        return Lessoninfo;
+    public List<LessonData> getLessonDetails() {
+        return LessonDetails;
     }
 
-    public void setLessoninfo(List<LessonData> lessoninfo) {
-        Lessoninfo = lessoninfo;
-    }
+    public void setLessonDetails(List<LessonData> lessonDetails) { LessonDetails = lessonDetails; }
 }

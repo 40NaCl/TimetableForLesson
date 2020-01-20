@@ -1,6 +1,6 @@
 package jp.ac.uryukyu.ie;
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args){
 
@@ -8,6 +8,7 @@ public class Main {
         String Show = "表示";
         String LetItMake = "作成";
         String Finish = "終了";
+
 
 
         while (WontContinue){
@@ -21,7 +22,7 @@ public class Main {
             Scanner sc1 = new Scanner(System.in);
             String line = sc1.nextLine();
 
-            
+
             if(line.equals(Show)){
 
             }else if(line.equals(LetItMake)){

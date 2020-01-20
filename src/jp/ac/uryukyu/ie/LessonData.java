@@ -1,41 +1,35 @@
 package jp.ac.uryukyu.ie;
 
+import javax.naming.spi.StateFactory;
+
 public class LessonData {
     private String  StudentName;
     private String TeacherName;
     private String subject;
-    private int month;
-    private int day;
-    private int hour;
-    private int minute;
+    private String month;
+    private String day;
+    private String hour;
+    private String minute;
 
     public String getStudentName() {
         return StudentName;
     }
-
     public String getTeacherName() {
         return TeacherName;
     }
-
     public String getSubject() {
         return subject;
     }
-
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
-
-    public int getDay() {
+    public String getDay() {
         return day;
     }
-
-    public int getHour() {
+    public String getHour() {
         return hour;
     }
-
-    public int getMinute() {
-        return minute;
-    }
+    public String getMinute() { return minute; }
 
     public void setStudentName(String studentName) {
         StudentName = studentName;
@@ -49,29 +43,22 @@ public class LessonData {
         this.subject = subject;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(String month) {
         this.month = month;
     }
 
-    public void setDay(int day) {
+    public void setDay(String day) {
         this.day = day;
     }
 
-    public void setHour(int hour) {
+    public void setHour(String hour) {
         this.hour = hour;
     }
 
-    public void setMinute(int minute) {
+    public void setMinute(String minute) {
         this.minute = minute;
     }
 
-    //LessonData(String StudentName, String TeacherName, String subject, int month, int day, int time){
-        //this.StudentName = StudentName;
-        //this.TeacherName = TeacherName;
-        //this.subject = subject;
-        //this.month = month;
-        //this.day = day;
-        //his.time = time;
 
     @Override
     public String toString(){
