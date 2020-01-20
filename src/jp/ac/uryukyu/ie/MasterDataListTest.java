@@ -5,28 +5,30 @@ import java.util.List;
 
 public class MasterDataListTest {
     public static void main(String[] args){
-        List<MasterDataList> MList = new ArrayList<MasterDataList>();
-        MasterDataList MData;
+        List<MasterDataList> MstList = new ArrayList<MasterDataList>();
+        MasterDataList Mdata;
 
         //以下LessonDataの編集ーーーーーーーーーーーーーーーーーーーーーー
         List<LessonData> list;
         LessonData data;
 
-        MData = new MasterDataList();
+        Mdata = new MasterDataList();
         list = new ArrayList<LessonData>();
         data = new LessonData();
+
         data.setStudentName("太郎くん");
         data.setTeacherName("佐藤先生");
         data.setSubject("数学");
         data.setMonth(1);
         data.setDay(4);
-        data.setTime(1400);
+        data.setHour(14);
+        data.setMinute(00);
         list.add(data);
 
-        MData.setLessoninfo(list);
-        MList.add(MData);
+        Mdata.setLessoninfo(list);
+        MstList.add(Mdata);
 
-        System.out.println(MList.get(0).getLessoninfo());
+        System.out.println(MstList.get(0).getLessoninfo());
 
 
     }

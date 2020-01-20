@@ -6,7 +6,8 @@ public class LessonData {
     private String subject;
     private int month;
     private int day;
-    private int time;
+    private int hour;
+    private int minute;
 
     public String getStudentName() {
         return StudentName;
@@ -28,8 +29,12 @@ public class LessonData {
         return day;
     }
 
-    public int getTime() {
-        return time;
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
     }
 
     public void setStudentName(String studentName) {
@@ -52,8 +57,12 @@ public class LessonData {
         this.day = day;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
     }
 
     //LessonData(String StudentName, String TeacherName, String subject, int month, int day, int time){
@@ -63,5 +72,17 @@ public class LessonData {
         //this.month = month;
         //this.day = day;
         //his.time = time;
+
+    @Override
+    public String toString(){
+        return StudentName + " " + subject + " "
+                + month + "月" + day + "日" + hour + "時" + minute + "分 "
+                + TeacherName;
     }
+
+
+}
+
+
+
 
