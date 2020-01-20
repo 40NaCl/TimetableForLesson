@@ -1,10 +1,8 @@
 package jp.ac.uryukyu.ie;
 
-import javax.naming.spi.StateFactory;
-
-public class LessonData {
-    private String  StudentName;
-    private String TeacherName;
+public class LessonData extends CreateSortName {
+    private String  studentName;
+    private String teacherName;
     private String subject;
     private String month;
     private String day;
@@ -12,10 +10,10 @@ public class LessonData {
     private String minute;
 
     public String getStudentName() {
-        return StudentName;
+        return studentName;
     }
     public String getTeacherName() {
-        return TeacherName;
+        return teacherName;
     }
     public String getSubject() {
         return subject;
@@ -32,12 +30,10 @@ public class LessonData {
     public String getMinute() { return minute; }
 
     public void setStudentName(String studentName) {
-        StudentName = studentName;
+        this.studentName = studentName;
     }
 
-    public void setTeacherName(String teacherName) {
-        TeacherName = teacherName;
-    }
+    public void setTeacherName(String teacherName) {this.teacherName = teacherName;}
 
     public void setSubject(String subject) {
         this.subject = subject;
@@ -62,9 +58,7 @@ public class LessonData {
 
     @Override
     public String toString(){
-        return StudentName + " " + subject + " "
-                + month + "月" + day + "日" + hour + "時" + minute + "分 "
-                + TeacherName;
+        return studentName + subject + month + day + hour + minute + teacherName;
     }
 
 

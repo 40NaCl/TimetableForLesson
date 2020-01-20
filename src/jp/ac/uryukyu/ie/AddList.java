@@ -5,16 +5,19 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class MakeList {
-    public static void main(String[] args){
-        List<MasterDataList> MstList = new ArrayList<MasterDataList>();
-        MasterDataList Mdata;
+public class AddList {
+    private List<LessonData> list = AddList();
+
+    public void setList(List<LessonData> list) { this.list = list; }
+
+    public List<LessonData> getList() { return list; }
+
+    public List AddList() {
 
         //以下LessonDataの編集ーーーーーーーーーーーーーーーーーーーーーー
         List<LessonData> list;
         LessonData data;
 
-        Mdata = new MasterDataList();
         list = new ArrayList<LessonData>();
         data = new LessonData();
 
@@ -44,29 +47,25 @@ public class MakeList {
 
             list.add(data);
             System.out.println(data);
-            System.out.println("\n\n本当にこの入力でよろしいでしょうか？" +"\n「yes」か「no」を入力してください。");
+            System.out.println("\n\n本当にこの入力でよろしいでしょうか？" + "\n「yes」か「no」を入力してください。");
 
-            boolean confirmation = true;
-            while (confirmation) {
+
+            while (true) {
                 if (scan().equals("yes")) {
                     System.out.println("時間割表に追加します");
-                    confirmation = false;
                     really = false;
+                    break;
                 }
                 if (scan().equals("no")) {
                     System.out.println("最初からやり直してください");
-                    confirmation = false;
+                    break;
                 } else {
                     System.out.println("不明な単語が検出されました。もう一度入力してください。");
                 }
             }
         }
 
-        Mdata.setLessonDetails(list);
-        MstList.add(Mdata);
-
-        System.out.println(MstList.get(0).getLessonDetails());
-
+        return list;
     }
 
     public static void question(String sort){
