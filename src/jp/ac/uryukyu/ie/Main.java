@@ -15,11 +15,12 @@ public class Main {
         List<List<LessonData>> masterDateList;
         int countListOfMDL = 0;
 
-        CreateSortName createSortName;
-        createSortName = new CreateSortName();
+        //CreateSortName createSortName;
+        //createSortName = new CreateSortName();
 
-        masterDateList = new ArrayList<>(Arrays.asList(createSortName.getList()));
-        countListOfMDL++;
+        masterDateList = new ArrayList<>();
+        //masterDateList.add(createSortName.getList());
+        //countListOfMDL++;
 
 
 
@@ -36,17 +37,16 @@ public class Main {
 
 
             if (line.equals(Show)) {
-                for(int i=0;i>countListOfMDL;i++){
-                    LessonData data = new LessonData();
 
-                    System.out.println(data);
-                }
+                //for(int i=0;i>countListOfMDL;i++){
+               //     System.out.println();
+               // }
 
             } else if (line.equals(LetItAdd)) {
                 AddList addList;
                 addList = new AddList();
                 masterDateList.add(addList.getList());
-
+                countListOfMDL++;
 
             } else if (line.equals(Finish)) {
                 WontContinue = false;
