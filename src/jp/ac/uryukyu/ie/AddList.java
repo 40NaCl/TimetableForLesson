@@ -18,7 +18,7 @@ public class AddList {
         List<LessonData> list;
         LessonData data;
 
-        list = new ArrayList<LessonData>();
+        list = new ArrayList<>();
         data = new LessonData();
 
         boolean really = true;

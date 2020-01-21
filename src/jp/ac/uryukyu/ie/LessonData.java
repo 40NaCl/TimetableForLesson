@@ -1,6 +1,6 @@
 package jp.ac.uryukyu.ie;
 
-public class LessonData extends CreateSortName {
+public class LessonData {
     private String  studentName;
     private String teacherName;
     private String subject;

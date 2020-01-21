@@ -13,7 +13,6 @@ public class CreateSortName {
     public void setList(List<LessonData> list) { this.list = list; }
 
     public List createSortName() {
-        List<LessonData> list;
         LessonData data;
 
 

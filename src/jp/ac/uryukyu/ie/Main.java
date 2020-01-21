@@ -17,13 +17,12 @@ public class Main {
         List<List<LessonData>> masterDateList;//時間割全体を保存するためのMasterList
         int countListOfMDL = 0;//入力された授業数のカウンター
 
-        //CreateSortName createSortName;
-        //createSortName = new CreateSortName();　
-        //データの種類を書いたlistをMasterListに入れようとしたが、何故かオーバーフローしてしまう、、
+        CreateSortName createSortName;
+        createSortName = new CreateSortName();
 
         masterDateList = new ArrayList<>();
-        //masterDateList.add(createSortName.getList());
-        //countListOfMDL++;
+        masterDateList.add(createSortName.getList());
+        countListOfMDL++;
 
 
 
